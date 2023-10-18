@@ -78,7 +78,15 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">path</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block">Represents a path that the robot can follow.
- Instantiate with a list of points.</div>
+ Instantiate with a list of points.
+
+ The robot will follow the path by going to each point in order.
+
+ For example, I would pass in points=[[0,0], [1,0], [1,1], [0,1]] to make the robot travel in a square
+
+ The robot will go to [0,0], then [1,0], then [1,1], then [0,1]
+
+ The robot will stop at the last point in the path, and its heading will be the finalHeading that is passed in.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -105,8 +113,11 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.ArrayList)" class="member-name-link">path</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;double[]&gt;&nbsp;points)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.ArrayList,double)" class="member-name-link">path</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;double[]&gt;&nbsp;points,
+ double&nbsp;finalHeading)</code></div>
+<div class="col-last even-row-color">
+<div class="block">creates a path with the specified points and final heading.</div>
+</div>
 </div>
 </section>
 </li>
@@ -194,9 +205,16 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.ArrayList)">
+<section class="detail" id="&lt;init&gt;(java.util.ArrayList,double)">
 <h3>path</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">path</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;double[]&gt;&nbsp;points)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">path</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;double[]&gt;&nbsp;points,
+ double&nbsp;finalHeading)</span></div>
+<div class="block">creates a path with the specified points and final heading.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>points</code> - - a list of points that the robot will follow, in the form of [x, y] where x and y are both doubles.</dd>
+<dd><code>finalHeading</code> - - the heading that the robot will be at when it reaches the end of the path.</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -244,10 +262,11 @@ loadScripts(document, 'script');</script>
 <div class="block">calculates a vector from (x,y) to the nearest point on the path. The index of the nearest point must be greater than or equal to minIndex</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>x</code> - </dd>
-<dd><code>y</code> - </dd>
-<dd><code>minIndex</code> - </dd>
+<dd><code>x</code> - - x</dd>
+<dd><code>y</code> - - y</dd>
+<dd><code>minIndex</code> - - the index of the nearest point must be greater than or equal to minIndex</dd>
 <dt>Returns:</dt>
+<dd>- a vector from (x,y) to the nearest point on the path</dd>
 </dl>
 </section>
 </li>
@@ -276,10 +295,11 @@ loadScripts(document, 'script');</script>
 <div class="block">calculates the nearest point on the path. The index of the nearest point must be greater than or equal to minIndex</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>x</code> - </dd>
-<dd><code>y</code> - </dd>
-<dd><code>minIndex</code> - </dd>
+<dd><code>x</code> - - x</dd>
+<dd><code>y</code> - - y</dd>
+<dd><code>minIndex</code> - - the index of the nearest point must be greater than or equal to minIndex</dd>
 <dt>Returns:</dt>
+<dd>- the nearest point on the path</dd>
 </dl>
 </section>
 </li>

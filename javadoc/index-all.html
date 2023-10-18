@@ -49,7 +49,7 @@ loadScripts(document, 'script');</script>
 <div class="header">
 <h1>Index</h1>
 </div>
-<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:X">X</a>&nbsp;<a href="#I:Y">Y</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a>
+<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:X">X</a>&nbsp;<a href="#I:Y">Y</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a>
 <h2 class="title" id="I:A">A</h2>
 <dl class="index">
 <dt><a href="com/mineinjava/quail/util/geometry/Vec2d.html#add(double,double)" class="member-name-link">add(double, double)</a> - Method in class com.mineinjava.quail.util.geometry.<a href="com/mineinjava/quail/util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></dt>
@@ -255,7 +255,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/mineinjava/quail/localization/swerveOdometry.html#getPoseEstimate()" class="member-name-link">getPoseEstimate()</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/swerveOdometry.html" title="class in com.mineinjava.quail.localization">swerveOdometry</a></dt>
 <dd>
-<div class="block">Returns the robot's pose</div>
+<div class="block">Returns the robot's pose when given a change in position as a vector and a change in rotation.</div>
 </dd>
 <dt><a href="com/mineinjava/quail/localization/TwoWheelLocalizer.html#getPoseEstimate()" class="member-name-link">getPoseEstimate()</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/TwoWheelLocalizer.html" title="class in com.mineinjava.quail.localization">TwoWheelLocalizer</a></dt>
 <dd>
@@ -280,6 +280,13 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/mineinjava/quail/util/geometry/Pose2d.html#headingVec()" class="member-name-link">headingVec()</a> - Method in class com.mineinjava.quail.util.geometry.<a href="com/mineinjava/quail/util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></dt>
 <dd>&nbsp;</dd>
+</dl>
+<h2 class="title" id="I:I">I</h2>
+<dl class="index">
+<dt><a href="com/mineinjava/quail/odometry/pathFollower.html#isFinished()" class="member-name-link">isFinished()</a> - Method in class com.mineinjava.quail.odometry.<a href="com/mineinjava/quail/odometry/pathFollower.html" title="class in com.mineinjava.quail.odometry">pathFollower</a></dt>
+<dd>
+<div class="block">returns true if the robot is finished following the path.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
@@ -374,8 +381,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/mineinjava/quail/odometry/pathFollower.html#path" class="member-name-link">path</a> - Variable in class com.mineinjava.quail.odometry.<a href="com/mineinjava/quail/odometry/pathFollower.html" title="class in com.mineinjava.quail.odometry">pathFollower</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/mineinjava/quail/odometry/path.html#%3Cinit%3E(java.util.ArrayList)" class="member-name-link">path(ArrayList&lt;double[]&gt;)</a> - Constructor for class com.mineinjava.quail.odometry.<a href="com/mineinjava/quail/odometry/path.html" title="class in com.mineinjava.quail.odometry">path</a></dt>
-<dd>&nbsp;</dd>
+<dt><a href="com/mineinjava/quail/odometry/path.html#%3Cinit%3E(java.util.ArrayList,double)" class="member-name-link">path(ArrayList&lt;double[]&gt;, double)</a> - Constructor for class com.mineinjava.quail.odometry.<a href="com/mineinjava/quail/odometry/path.html" title="class in com.mineinjava.quail.odometry">path</a></dt>
+<dd>
+<div class="block">creates a path with the specified points and final heading.</div>
+</dd>
 <dt><a href="com/mineinjava/quail/odometry/pathFollower.html" class="type-name-link" title="class in com.mineinjava.quail.odometry">pathFollower</a> - Class in <a href="com/mineinjava/quail/odometry/package-summary.html">com.mineinjava.quail.odometry</a></dt>
 <dd>
 <div class="block">class that helps you follow paths</div>
@@ -622,14 +631,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Updates the robot's position based on a change in x, y, and a theta.</div>
 </dd>
-<dt><a href="com/mineinjava/quail/localization/swerveOdometry.html#updateDeltaOdometry(com.mineinjava.quail.util.geometry.Vec2d)" class="member-name-link">updateDeltaOdometry(Vec2d)</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/swerveOdometry.html" title="class in com.mineinjava.quail.localization">swerveOdometry</a></dt>
-<dd>
-<div class="block">updates the robot's position based on a change in x, y (represented by a vector)
- All values must be field-centric.</div>
-</dd>
 <dt><a href="com/mineinjava/quail/localization/swerveOdometry.html#updateDeltaOdometry(com.mineinjava.quail.util.geometry.Vec2d,double)" class="member-name-link">updateDeltaOdometry(Vec2d, double)</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/swerveOdometry.html" title="class in com.mineinjava.quail.localization">swerveOdometry</a></dt>
 <dd>
 <div class="block">Updates the robot's position based on a change in x, y, (represented by a vector) and a theta.</div>
+</dd>
+<dt><a href="com/mineinjava/quail/localization/swerveOdometry.html#updateDeltaPoseEstimate(com.mineinjava.quail.util.geometry.Vec2d)" class="member-name-link">updateDeltaPoseEstimate(Vec2d)</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/swerveOdometry.html" title="class in com.mineinjava.quail.localization">swerveOdometry</a></dt>
+<dd>
+<div class="block">updates the robot's position based on a change in x, y (represented by a vector)
+ All values must be field-centric.</div>
 </dd>
 <dt><a href="com/mineinjava/quail/localization/swerveOdometry.html#updateOdometry(double,double,double)" class="member-name-link">updateOdometry(double, double, double)</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/swerveOdometry.html" title="class in com.mineinjava.quail.localization">swerveOdometry</a></dt>
 <dd>
@@ -708,7 +717,7 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/mineinjava/quail/util/geometry/Vec2d.html#y" class="member-name-link">y</a> - Variable in class com.mineinjava.quail.util.geometry.<a href="com/mineinjava/quail/util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></dt>
 <dd>&nbsp;</dd>
 </dl>
-<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:X">X</a>&nbsp;<a href="#I:Y">Y</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a></main>
+<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:X">X</a>&nbsp;<a href="#I:Y">Y</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a></main>
 </div>
 </div>
 </body>

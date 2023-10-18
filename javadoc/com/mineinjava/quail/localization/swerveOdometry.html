@@ -173,7 +173,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPoseEstimate()" class="member-name-link">getPoseEstimate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the robot's pose</div>
+<div class="block">Returns the robot's pose when given a change in position as a vector and a change in rotation.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPoseEstimate(com.mineinjava.quail.util.geometry.Pose2d)" class="member-name-link">setPoseEstimate</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;pose)</code></div>
@@ -189,16 +189,16 @@ loadScripts(document, 'script');</script>
 <div class="block">Updates the robot's position based on a change in x, y, and a theta.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateDeltaOdometry(com.mineinjava.quail.util.geometry.Vec2d)" class="member-name-link">updateDeltaOdometry</a><wbr>(<a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a>&nbsp;dpos)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateDeltaOdometry(com.mineinjava.quail.util.geometry.Vec2d,double)" class="member-name-link">updateDeltaOdometry</a><wbr>(<a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a>&nbsp;dpos,
+ double&nbsp;dtheta)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">updates the robot's position based on a change in x, y (represented by a vector)
- All values must be field-centric.</div>
+<div class="block">Updates the robot's position based on a change in x, y, (represented by a vector) and a theta.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateDeltaOdometry(com.mineinjava.quail.util.geometry.Vec2d,double)" class="member-name-link">updateDeltaOdometry</a><wbr>(<a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a>&nbsp;dpos,
- double&nbsp;dtheta)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateDeltaPoseEstimate(com.mineinjava.quail.util.geometry.Vec2d)" class="member-name-link">updateDeltaPoseEstimate</a><wbr>(<a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a>&nbsp;dpos)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Updates the robot's position based on a change in x, y, (represented by a vector) and a theta.</div>
+<div class="block">updates the robot's position based on a change in x, y (represented by a vector)
+ All values must be field-centric.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateOdometry(double,double,double)" class="member-name-link">updateOdometry</a><wbr>(double&nbsp;mx,
@@ -379,9 +379,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="updateDeltaOdometry(com.mineinjava.quail.util.geometry.Vec2d)">
-<h3>updateDeltaOdometry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateDeltaOdometry</span><wbr><span class="parameters">(<a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a>&nbsp;dpos)</span></div>
+<section class="detail" id="updateDeltaPoseEstimate(com.mineinjava.quail.util.geometry.Vec2d)">
+<h3>updateDeltaPoseEstimate</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateDeltaPoseEstimate</span><wbr><span class="parameters">(<a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a>&nbsp;dpos)</span></div>
 <div class="block">updates the robot's position based on a change in x, y (represented by a vector)
  All values must be field-centric.</div>
 <dl class="notes">
@@ -394,7 +394,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPoseEstimate()">
 <h3>getPoseEstimate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></span>&nbsp;<span class="element-name">getPoseEstimate</span>()</div>
-<div class="block">Returns the robot's pose</div>
+<div class="block">Returns the robot's pose when given a change in position as a vector and a change in rotation.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Localizer.html#getPoseEstimate()">getPoseEstimate</a></code>&nbsp;in class&nbsp;<code><a href="Localizer.html" title="class in com.mineinjava.quail.localization">Localizer</a></code></dd>
