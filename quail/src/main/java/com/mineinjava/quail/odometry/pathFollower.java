@@ -72,11 +72,16 @@ public class pathFollower {
     /** returns true if the robot is finished following the path.
      */
     public Boolean isFinished() {
-       Pose2d currentPose = this.localizer.getPoseEstimate();
+        
+        if( this.localizer.getPoseEstimate() == null ) {
+            throw new NullPointerException("localizer.getPoseEstimate() is null");
+        }
+        
+        Pose2d currentPose = this.localizer.getPoseEstimate();
 
-       if (this.path.currentPoint >= this.path.points.size() - 1) {
+        if (this.path.currentPoint >= this.path.points.size() - 1) {
            return true;
-       }
+        }
 
        return this.path.vectorToNearestPoint(currentPose, this.path.currentPoint).getLength() < this.precision;
     }
