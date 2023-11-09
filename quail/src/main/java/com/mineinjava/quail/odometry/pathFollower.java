@@ -74,7 +74,8 @@ public class pathFollower {
     public Boolean isFinished() {
         
         if( this.localizer == null ) {
-            throw new NullPointerException("pathFollower localizer is null");
+            System.out.println("Localizer is null");
+            return true;
         }
 
         Pose2d currentPose = this.localizer.getPoseEstimate();
