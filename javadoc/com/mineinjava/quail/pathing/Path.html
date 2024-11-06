@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
-<script type="text/javascript" src="../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -77,7 +77,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Path</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Represents a path that the robot can follow. Instantiate with a list of pose2d.
+<div class="block">Represents a path that the robot can follow.
+
+ <p>Instantiate with a list of pose2d.
 
  <p>The robot will follow the path by going to each pose in order.
 
@@ -89,9 +91,12 @@ loadScripts(document, 'script');</script>
  <p>The robot will stop at the last point in the path, and its heading will be the heading of the
  last pose in the path.
 
- <p>the LAST POINT is the last point that the robot hit the CURRENT POINT is the point that the
- robot is currently pathing towards the NEXT POINT is the point that the robot will path towards
- after reaching the CURRENT POINT</div>
+ <ul>
+   <li>The `LAST POINT` is the last point that the robot hit.
+   <li>The `CURRENT POINT` is the point that the robot is currently pathing towards
+   <li>The NEXT POINT is the point that the robot will path towards after reaching the CURRENT
+       POINT
+ </ul></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -105,14 +110,11 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>int</code></div>
-<div class="col-second even-row-color"><code><a href="#currentPointIndex" class="member-name-link">currentPointIndex</a></code></div>
+<div class="col-second even-row-color"><code><a href="#lastPointIndex" class="member-name-link">lastPointIndex</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>int</code></div>
-<div class="col-second odd-row-color"><code><a href="#lastPointIndex" class="member-name-link">lastPointIndex</a></code></div>
+<div class="col-first odd-row-color"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&gt;</code></div>
+<div class="col-second odd-row-color"><code><a href="#points" class="member-name-link">points</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#points" class="member-name-link">points</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -126,7 +128,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.ArrayList)" class="member-name-link">Path</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&gt;&nbsp;points)</code></div>
 <div class="col-last even-row-color">
-<div class="block">creates a path with the specified points and final heading.</div>
+<div class="block">Creates a path with the specified points and final heading.</div>
 </div>
 </div>
 </section>
@@ -137,18 +139,20 @@ loadScripts(document, 'script');</script>
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#distance_last_to_current_point()" class="member-name-link">distance_last_to_current_point</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#distanceLastToCurrentPoint()" class="member-name-link">distanceLastToCurrentPoint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the distance from last point to current point.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#distanceToCurrentPoint(com.mineinjava.quail.util.geometry.Pose2d)" class="member-name-link">distanceToCurrentPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the distance from the passed point to the current point</div>
+<div class="block">Returns the distance from the passed point to the current point.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#distanceToNextPoint(com.mineinjava.quail.util.geometry.Pose2d)" class="member-name-link">distanceToNextPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point)</code></div>
@@ -158,55 +162,73 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentPoint()" class="member-name-link">getCurrentPoint</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">returns the current point in the path.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextPoint()" class="member-name-link">getNextPoint</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">returns the next point in the path.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPointRelativeToCurrent(int)" class="member-name-link">getPointRelativeToCurrent</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">returns the point at the specified index relative to the current point.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#length()" class="member-name-link">length</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">returns the overall length of the path assuming the robot paths on straight lines</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearestPoint(com.mineinjava.quail.util.geometry.Pose2d,int)" class="member-name-link">nearestPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
- int&nbsp;minIndex)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Calculates the nearest point on the path.</div>
+<div class="block">Returns the current point in the path.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearestPointIndex(com.mineinjava.quail.util.geometry.Pose2d,int)" class="member-name-link">nearestPointIndex</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentPointIndex()" class="member-name-link">getCurrentPointIndex</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the index of the current point in the path.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextPoint()" class="member-name-link">getNextPoint</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the next point in the path.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPointRelativeToCurrent(int)" class="member-name-link">getPointRelativeToCurrent</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the point at the specified index relative to the current point.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#incrementCurrentPointIndex()" class="member-name-link">incrementCurrentPointIndex</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Increments the current point index.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isFinished()" class="member-name-link">isFinished</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#length()" class="member-name-link">length</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the overall length of the path assuming the robot paths on straight lines.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearestPoint(com.mineinjava.quail.util.geometry.Pose2d,int)" class="member-name-link">nearestPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
  int&nbsp;minIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Calculates the nearest point on the path.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearestPointIndex(com.mineinjava.quail.util.geometry.Pose2d,int)" class="member-name-link">nearestPointIndex</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
+ int&nbsp;minIndex)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculates the index of the nearest point on the path.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextMovementVector()" class="member-name-link">nextMovementVector</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">next movement vector for lookahead</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remainingLength(com.mineinjava.quail.util.geometry.Pose2d)" class="member-name-link">remainingLength</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;position)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">returns the remaining length of the path.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#vectorLastToCurrentPoint()" class="member-name-link">vectorLastToCurrentPoint</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#vectorToCurrentPoint(com.mineinjava.quail.util.geometry.Pose2d)" class="member-name-link">vectorToCurrentPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#vectorToNearestPoint(com.mineinjava.quail.util.geometry.Pose2d,int)" class="member-name-link">vectorToNearestPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
- int&nbsp;minIndex)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextMovementVector()" class="member-name-link">nextMovementVector</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Next movement vector for lookahead.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#remainingLength(com.mineinjava.quail.util.geometry.Pose2d)" class="member-name-link">remainingLength</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;position)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">* Given a position, calculate the distance from that position to the next point then the
+ remaining distance on the path</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#vectorLastToCurrentPoint()" class="member-name-link">vectorLastToCurrentPoint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a vector from the last point to the current point.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#vectorToCurrentPoint(com.mineinjava.quail.util.geometry.Pose2d)" class="member-name-link">vectorToCurrentPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a vector from the passed pose to the current point.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#vectorToNearestPoint(com.mineinjava.quail.util.geometry.Pose2d,int)" class="member-name-link">vectorToNearestPoint</a><wbr>(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
+ int&nbsp;minIndex)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Calculates a vector from (x,y) to the nearest point on the path.</div>
 </div>
 </div>
@@ -229,13 +251,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="points">
 <h3>points</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&gt;</span>&nbsp;<span class="element-name">points</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="currentPointIndex">
-<h3>currentPointIndex</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">currentPointIndex</span></div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&gt;</span>&nbsp;<span class="element-name">points</span></div>
 </section>
 </li>
 <li>
@@ -256,10 +272,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.util.ArrayList)">
 <h3>Path</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Path</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&gt;&nbsp;points)</span></div>
-<div class="block">creates a path with the specified points and final heading.</div>
+<div class="block">Creates a path with the specified points and final heading.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>points</code> - - a list of pose2ds that the robot will follow in order</dd>
+<dd><code>points</code> - a list of pose2ds that the robot will follow in order</dd>
 </dl>
 </section>
 </li>
@@ -272,41 +288,82 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="isFinished()">
+<h3>isFinished</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isFinished</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="incrementCurrentPointIndex()">
+<h3>incrementCurrentPointIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">incrementCurrentPointIndex</span>()</div>
+<div class="block">Increments the current point index.</div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the path is already finished or if the current point index is
+     greater than the last point index</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getNextPoint()">
 <h3>getNextPoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></span>&nbsp;<span class="element-name">getNextPoint</span>()</div>
-<div class="block">returns the next point in the path.</div>
+<div class="block">Gets the next point in the path.
+
+ <p>If the path is finished, or if we are on the last point, returns null.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the next point in the path, or null</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCurrentPointIndex()">
+<h3>getCurrentPointIndex</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getCurrentPointIndex</span>()</div>
+<div class="block">Gets the index of the current point in the path.
+
+ <p>may be out of bounds</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCurrentPoint()">
 <h3>getCurrentPoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></span>&nbsp;<span class="element-name">getCurrentPoint</span>()</div>
-<div class="block">returns the current point in the path.</div>
+<div class="block">Returns the current point in the path.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPointRelativeToCurrent(int)">
 <h3>getPointRelativeToCurrent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></span>&nbsp;<span class="element-name">getPointRelativeToCurrent</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block">returns the point at the specified index relative to the current point.</div>
+<div class="block">Gets the point at the specified index relative to the current point.
+
+ <p>If the path is finished, returns null</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - the offset from the current point</dd>
+<dt>Returns:</dt>
+<dd>the point at the specified index relative to the current point, or null if the path is
+     finished</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the index is out of bounds</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="vectorToCurrentPoint(com.mineinjava.quail.util.geometry.Pose2d)">
 <h3>vectorToCurrentPoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></span>&nbsp;<span class="element-name">vectorToCurrentPoint</span><wbr><span class="parameters">(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point)</span></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>a vector from the passed pose to the current point</dd>
-</dl>
+<div class="block">Returns a vector from the passed pose to the current point.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="length()">
 <h3>length</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">length</span>()</div>
-<div class="block">returns the overall length of the path assuming the robot paths on straight lines</div>
+<div class="block">Returns the overall length of the path assuming the robot paths on straight lines.</div>
 </section>
 </li>
 <li>
@@ -316,9 +373,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the distance from the passed point to the next point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - - the point to calculate the distance from</dd>
+<dd><code>point</code> - the point to calculate the distance from</dd>
 <dt>Returns:</dt>
-<dd>- the distance from the current point to the next point</dd>
+<dd>the distance from the current point to the next point</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the path is finished</dd>
 </dl>
 </section>
 </li>
@@ -326,12 +385,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="distanceToCurrentPoint(com.mineinjava.quail.util.geometry.Pose2d)">
 <h3>distanceToCurrentPoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">distanceToCurrentPoint</span><wbr><span class="parameters">(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point)</span></div>
-<div class="block">Returns the distance from the passed point to the current point</div>
+<div class="block">Returns the distance from the passed point to the current point.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - - the point to calculate the distance from</dd>
+<dd><code>point</code> - the point to calculate the distance from</dd>
 <dt>Returns:</dt>
-<dd>- the distance from the current point to the next point</dd>
+<dd>the distance from the current point to the next point</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the path is finished</dd>
 </dl>
 </section>
 </li>
@@ -339,27 +400,25 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="vectorLastToCurrentPoint()">
 <h3>vectorLastToCurrentPoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></span>&nbsp;<span class="element-name">vectorLastToCurrentPoint</span>()</div>
+<div class="block">Returns a vector from the last point to the current point.</div>
 <dl class="notes">
-<dt>Returns:</dt>
-<dd>a vector from the last point to the current point</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the path is finished</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="distance_last_to_current_point()">
-<h3>distance_last_to_current_point</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">distance_last_to_current_point</span>()</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>distance from last point to current point</dd>
-</dl>
+<section class="detail" id="distanceLastToCurrentPoint()">
+<h3>distanceLastToCurrentPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">distanceLastToCurrentPoint</span>()</div>
+<div class="block">Returns the distance from last point to current point.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextMovementVector()">
 <h3>nextMovementVector</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></span>&nbsp;<span class="element-name">nextMovementVector</span>()</div>
-<div class="block">next movement vector for lookahead</div>
+<div class="block">Next movement vector for lookahead.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a vector from the current point to the next point</dd>
@@ -371,14 +430,15 @@ loadScripts(document, 'script');</script>
 <h3>vectorToNearestPoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Vec2d.html" title="class in com.mineinjava.quail.util.geometry">Vec2d</a></span>&nbsp;<span class="element-name">vectorToNearestPoint</span><wbr><span class="parameters">(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
  int&nbsp;minIndex)</span></div>
-<div class="block">Calculates a vector from (x,y) to the nearest point on the path. The index of the nearest point
- must be greater than or equal to minIndex</div>
+<div class="block">Calculates a vector from (x,y) to the nearest point on the path.
+
+ <p>The index of the nearest point must be greater than or equal to minIndex</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - - the point to calculate the vector from</dd>
-<dd><code>minIndex</code> - - the index of the nearest point must be greater than or equal to minIndex</dd>
+<dd><code>point</code> - the point to calculate the vector from</dd>
+<dd><code>minIndex</code> - the index of the nearest point must be greater than or equal to minIndex</dd>
 <dt>Returns:</dt>
-<dd>- a vector from (x,y) to the nearest point on the path</dd>
+<dd>a vector from (x,y) to the nearest point on the path</dd>
 </dl>
 </section>
 </li>
@@ -387,8 +447,9 @@ loadScripts(document, 'script');</script>
 <h3>nearestPointIndex</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">nearestPointIndex</span><wbr><span class="parameters">(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
  int&nbsp;minIndex)</span></div>
-<div class="block">Calculates the index of the nearest point on the path. The index of the nearest point must be
- greater than or equal to minIndex</div>
+<div class="block">Calculates the index of the nearest point on the path.
+
+ <p>The index of the nearest point must be greater than or equal to minIndex</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>point</code> - </dd>
@@ -402,14 +463,20 @@ loadScripts(document, 'script');</script>
 <h3>nearestPoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a></span>&nbsp;<span class="element-name">nearestPoint</span><wbr><span class="parameters">(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;point,
  int&nbsp;minIndex)</span></div>
-<div class="block">Calculates the nearest point on the path. The index of the nearest point must be greater than
- or equal to minIndex</div>
+<div class="block">Calculates the nearest point on the path.
+
+ <p>The index of the nearest point must be greater than or equal to minIndex
+
+ <p>In case of a tie, the point that occurs earlier on the path is returned</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>point</code> - </dd>
-<dd><code>minIndex</code> - - the index of the nearest point must be greater than or equal to minIndex</dd>
+<dd><code>point</code> - the point relative to which you want to find the nearest point on the path</dd>
+<dd><code>minIndex</code> - the index of the nearest point must be greater than or equal to minIndex</dd>
 <dt>Returns:</dt>
-<dd>- the nearest point on the path</dd>
+<dd>the nearest point on the path</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there are no points between minIndex and the end of the
+     path.</dd>
 </dl>
 </section>
 </li>
@@ -417,7 +484,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="remainingLength(com.mineinjava.quail.util.geometry.Pose2d)">
 <h3>remainingLength</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">remainingLength</span><wbr><span class="parameters">(<a href="../util/geometry/Pose2d.html" title="class in com.mineinjava.quail.util.geometry">Pose2d</a>&nbsp;position)</span></div>
-<div class="block">returns the remaining length of the path.</div>
+<div class="block">* Given a position, calculate the distance from that position to the next point then the
+ remaining distance on the path</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>position</code> - where to calculate the distance to the currentPoint</dd>
+<dt>Returns:</dt>
+<dd>the total length remaining</dd>
+</dl>
 </section>
 </li>
 </ul>

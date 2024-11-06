@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
-<script type="text/javascript" src="../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -77,6 +77,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ConstraintsPair</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Represents a pair of constraints (max velocity and max acceleration) for use in the path
+ follower.
+
+ <p>Can be either translational or angular velocity. If angular velocity, units are in radians.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -91,8 +95,7 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double)" class="member-name-link">ConstraintsPair</a><wbr>(double&nbsp;maxVelocity,
  double&nbsp;maxAcceleration)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Represents a pair of constraints (max velocity and max acceleration) for use in the path
- follower Can be either translational or angular velocity.</div>
+<div class="block">Constructs a new ConstraintsPair with the specified max velocity and max acceleration.</div>
 </div>
 </div>
 </section>
@@ -103,20 +106,20 @@ loadScripts(document, 'script');</script>
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAcceleration()" class="member-name-link">getMaxAcceleration</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the constraints' max acceleration</div>
+<div class="block">Returns the maximum acceleration of the constraints.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxVelocity()" class="member-name-link">getMaxVelocity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the constraints' max velocity</div>
+<div class="block">Returns the maximum velocity of the constraints.</div>
 </div>
 </div>
 </div>
@@ -140,13 +143,11 @@ loadScripts(document, 'script');</script>
 <h3>ConstraintsPair</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ConstraintsPair</span><wbr><span class="parameters">(double&nbsp;maxVelocity,
  double&nbsp;maxAcceleration)</span></div>
-<div class="block">Represents a pair of constraints (max velocity and max acceleration) for use in the path
- follower Can be either translational or angular velocity. If angular velocity, units are in
- radians.</div>
+<div class="block">Constructs a new ConstraintsPair with the specified max velocity and max acceleration.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>maxVelocity</code> - your units/s</dd>
-<dd><code>maxAcceleration</code> - your units/s^2</dd>
+<dd><code>maxVelocity</code> - the maximum velocity in units/s</dd>
+<dd><code>maxAcceleration</code> - the maximum velocity in units/s^2</dd>
 </dl>
 </section>
 </li>
@@ -162,20 +163,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getMaxVelocity()">
 <h3>getMaxVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getMaxVelocity</span>()</div>
-<div class="block">Returns the constraints' max velocity</div>
-<dl class="notes">
-<dt>Returns:</dt>
-</dl>
+<div class="block">Returns the maximum velocity of the constraints.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMaxAcceleration()">
 <h3>getMaxAcceleration</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getMaxAcceleration</span>()</div>
-<div class="block">Returns the constraints' max acceleration</div>
-<dl class="notes">
-<dt>Returns:</dt>
-</dl>
+<div class="block">Returns the maximum acceleration of the constraints.</div>
 </section>
 </li>
 </ul>
