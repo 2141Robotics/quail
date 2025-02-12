@@ -71,11 +71,11 @@ public class SwerveDrive<T extends SwerveModuleBase> {
    * @param rotationSpeed speed of rotation
    * @param centerPoint modified center of rotation. Pass in Vec2d(0, 0) for default center of
    *     rotation
-   * @param gyroOffset the gyro rotation in radians
+   * @param gyroOffset the gyro's rotation in radians
    */
   public Vec2d[] calculateMoveAngles(
-      Vec2d moveVector, double rotationSpeed, double gyroOffset, Vec2d centerPoint) {
-    moveVector = moveVector.rotate(gyroOffset, false);
+      Vec2d moveVector, double rotationSpeed, double gyroAngle, Vec2d centerPoint) {
+    moveVector = moveVector.rotate(gyroAngle, false);
     // create a list of four vec2d objects and iterate over them with a for loop (not foreach)
     Vec2d[] moduleVectors = new Vec2d[this.swerveModules.size()];
     for (int i = 0; i < this.swerveModules.size(); i++) {
