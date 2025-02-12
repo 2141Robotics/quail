@@ -446,7 +446,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Localizer that uses a Kalman Filter.</div>
 </dd>
-<dt><a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html#%3Cinit%3E(com.mineinjava.quail.util.geometry.Vec2d,double)" class="member-name-link">KalmanFilterLocalizer(Vec2d, double)</a> - Constructor for class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html" title="class in com.mineinjava.quail.localization">KalmanFilterLocalizer</a></dt>
+<dt><a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html#%3Cinit%3E(com.mineinjava.quail.util.geometry.Pose2d,double)" class="member-name-link">KalmanFilterLocalizer(Pose2d, double)</a> - Constructor for class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html" title="class in com.mineinjava.quail.localization">KalmanFilterLocalizer</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
@@ -562,11 +562,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Class that helps you follow paths</div>
 </dd>
-<dt><a href="com/mineinjava/quail/pathing/PathFollower.html#%3Cinit%3E(com.mineinjava.quail.localization.Localizer,double,double,double,double,com.mineinjava.quail.util.MiniPID,double,double,double,double)" class="member-name-link">PathFollower(Localizer, double, double, double, double, MiniPID, double, double, double, double)</a> - Constructor for class com.mineinjava.quail.pathing.<a href="com/mineinjava/quail/pathing/PathFollower.html" title="class in com.mineinjava.quail.pathing">PathFollower</a></dt>
+<dt><a href="com/mineinjava/quail/pathing/PathFollower.html#%3Cinit%3E(com.mineinjava.quail.localization.Localizer,double,double,double,double,com.mineinjava.quail.util.MiniPID,double,double,double,double,double)" class="member-name-link">PathFollower(Localizer, double, double, double, double, MiniPID, double, double, double, double, double)</a> - Constructor for class com.mineinjava.quail.pathing.<a href="com/mineinjava/quail/pathing/PathFollower.html" title="class in com.mineinjava.quail.pathing">PathFollower</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/mineinjava/quail/pathing/PathFollower.html#%3Cinit%3E(com.mineinjava.quail.localization.Localizer,com.mineinjava.quail.pathing.Path,double,double,double,double,com.mineinjava.quail.util.MiniPID,double,double,double,double)" class="member-name-link">PathFollower(Localizer, Path, double, double, double, double, MiniPID, double, double, double, double)</a> - Constructor for class com.mineinjava.quail.pathing.<a href="com/mineinjava/quail/pathing/PathFollower.html" title="class in com.mineinjava.quail.pathing">PathFollower</a></dt>
+<dt><a href="com/mineinjava/quail/pathing/PathFollower.html#%3Cinit%3E(com.mineinjava.quail.localization.Localizer,com.mineinjava.quail.pathing.Path,double,double,double,double,com.mineinjava.quail.util.MiniPID,double,double,double,double,double)" class="member-name-link">PathFollower(Localizer, Path, double, double, double, double, MiniPID, double, double, double, double, double)</a> - Constructor for class com.mineinjava.quail.pathing.<a href="com/mineinjava/quail/pathing/PathFollower.html" title="class in com.mineinjava.quail.pathing">PathFollower</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/mineinjava/quail/pathing/PathFollower.html#%3Cinit%3E(com.mineinjava.quail.localization.Localizer,com.mineinjava.quail.pathing.Path,com.mineinjava.quail.pathing.ConstraintsPair,com.mineinjava.quail.pathing.ConstraintsPair,com.mineinjava.quail.util.MiniPID,double,double,double,double)" class="member-name-link">PathFollower(Localizer, Path, ConstraintsPair, ConstraintsPair, MiniPID, double, double, double, double)</a> - Constructor for class com.mineinjava.quail.pathing.<a href="com/mineinjava/quail/pathing/PathFollower.html" title="class in com.mineinjava.quail.pathing">PathFollower</a></dt>
+<dt><a href="com/mineinjava/quail/pathing/PathFollower.html#%3Cinit%3E(com.mineinjava.quail.localization.Localizer,com.mineinjava.quail.pathing.Path,com.mineinjava.quail.pathing.ConstraintsPair,com.mineinjava.quail.pathing.ConstraintsPair,com.mineinjava.quail.util.MiniPID,double,double,double,double,double)" class="member-name-link">PathFollower(Localizer, Path, ConstraintsPair, ConstraintsPair, MiniPID, double, double, double, double, double)</a> - Constructor for class com.mineinjava.quail.pathing.<a href="com/mineinjava/quail/pathing/PathFollower.html" title="class in com.mineinjava.quail.pathing">PathFollower</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/mineinjava/quail/pathing/PathSequenceFollower.html" class="type-name-link" title="class in com.mineinjava.quail.pathing">PathSequenceFollower</a> - Class in <a href="com/mineinjava/quail/pathing/package-summary.html">com.mineinjava.quail.pathing</a></dt>
 <dd>
@@ -902,14 +902,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Updates the ideal Value and calculates a new output Value based on the time since the last
  update.</div>
 </dd>
+<dt><a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html#update(com.mineinjava.quail.util.geometry.Pose2d,com.mineinjava.quail.util.geometry.Pose2d,double,double,double,double)" class="member-name-link">update(Pose2d, Pose2d, double, double, double, double)</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html" title="class in com.mineinjava.quail.localization">KalmanFilterLocalizer</a></dt>
+<dd>
+<div class="block">Updates the pose estimate.</div>
+</dd>
 <dt><a href="com/mineinjava/quail/util/geometry/AccelerationLimitedVector.html#update(com.mineinjava.quail.util.geometry.Vec2d)" class="member-name-link">update(Vec2d)</a> - Method in class com.mineinjava.quail.util.geometry.<a href="com/mineinjava/quail/util/geometry/AccelerationLimitedVector.html" title="class in com.mineinjava.quail.util.geometry">AccelerationLimitedVector</a></dt>
 <dd>
 <div class="block">Updates the ideal vector and calculates a new output vector based on the time since the last
  update.</div>
-</dd>
-<dt><a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html#update(com.mineinjava.quail.util.geometry.Vec2d,com.mineinjava.quail.util.geometry.Vec2d,double,double,double)" class="member-name-link">update(Vec2d, Vec2d, double, double, double)</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/KalmanFilterLocalizer.html" title="class in com.mineinjava.quail.localization">KalmanFilterLocalizer</a></dt>
-<dd>
-<div class="block">Updates the pose estimate.</div>
 </dd>
 <dt><a href="com/mineinjava/quail/localization/SwerveOdometry.html#updateDeltaOdometry(double,double,double)" class="member-name-link">updateDeltaOdometry(double, double, double)</a> - Method in class com.mineinjava.quail.localization.<a href="com/mineinjava/quail/localization/SwerveOdometry.html" title="class in com.mineinjava.quail.localization">SwerveOdometry</a></dt>
 <dd>
